@@ -1,26 +1,21 @@
-import React, { useCallback, useEffect, useState } from "react"
+import React, { useCallback, useState } from "react"
 import Toggle from "react-toggle"
-import { setTheme } from "../utils/theme"
 
 // const ICONS
 
 const ToggleTheme = () => {
-  let preferredTheme = localStorage.getItem("theme")
-  let darkQuery = window.matchMedia("prefers-color-scheme: dark)")
-  const [checked, setChecked] = useState(preferredTheme === "dark")
+  const [checked, setChecked] = useState(window.__theme === "dark")
 
-  useEffect(() => {
-    setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"))
-    setChecked(preferredTheme === "dark")
-  }, [])
+  const onChange = useCallback(
+    e => {
+      const isChecked = e.target.checked
+      setChecked(isChecked)
+      window.__setPreferredTheme(isChecked ? "dark" : "light")
+    },
+    [setChecked]
+  )
 
-  const hnandleTheme = useCallback(e => {
-    const isChecked = e.target.checked
-    setChecked(isChecked)
-    setTheme(isChecked ? "dark" : "light")
-  })
-
-  return <Toggle defaultChecked={checked} onChange={hnandleTheme} />
+  return <Toggle defaultChecked={checked} onChange={onChange} />
 }
 
 export default ToggleTheme
