@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `GeekReflex`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Jerry Nwosu`,
+      summary: `welcome to my personal programming blog, where I share my insights on all things code.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Welcome to my personal programming and tech blog. Join me as I share my insights and experiences on all things coding, technology, and beyond.`,
+    siteUrl: `https://geekreflex.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `0bizt`,
     },
   },
   plugins: [
