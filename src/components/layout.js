@@ -56,32 +56,36 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">
         {header}
-        <ToggleTheme
-          icons={{
-            checked: (
-              <img
-                src={moon}
-                width="16"
-                height="16"
-                role="presentation"
-                style={{ pointerEvents: "none" }}
-              />
-            ),
-            unchecked: (
-              <img
-                src={sun}
-                width="16"
-                height="16"
-                role="presentation"
-                style={{ pointerEvents: "none" }}
-              />
-            ),
-          }}
-          checked={theme === "dark"}
-          onChange={e =>
-            window.__setPreferredTheme(e.target.checked ? "dark" : "light")
-          }
-        />
+        {theme !== null ? (
+          <ToggleTheme
+            icons={{
+              checked: (
+                <img
+                  src={moon}
+                  width="16"
+                  height="16"
+                  role="presentation"
+                  style={{ pointerEvents: "none" }}
+                />
+              ),
+              unchecked: (
+                <img
+                  src={sun}
+                  width="16"
+                  height="16"
+                  role="presentation"
+                  style={{ pointerEvents: "none" }}
+                />
+              ),
+            }}
+            checked={theme === "dark"}
+            onChange={e =>
+              window.__setPreferredTheme(e.target.checked ? "dark" : "light")
+            }
+          />
+        ) : (
+          <div style={{ height: "24px" }} />
+        )}
       </header>
       <main>{children}</main>
       <footer>
