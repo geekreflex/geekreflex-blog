@@ -6,6 +6,15 @@ import sun from "../assets/sun.png"
 import moon from "../assets/moon.png"
 
 const Layout = ({ location, title, children }) => {
+  const [theme, setTheme] = React.useState(null)
+
+  React.useEffect(() => {
+    setTheme(window.__theme)
+    window.__onThemeChange = () => {
+      setTheme(window.__theme)
+    }
+  }, [])
+
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -68,6 +77,10 @@ const Layout = ({ location, title, children }) => {
               />
             ),
           }}
+          checked={theme === "dark"}
+          onChange={e =>
+            window.__setPreferredTheme(e.target.checked ? "dark" : "light")
+          }
         />
       </header>
       <main>{children}</main>

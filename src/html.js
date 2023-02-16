@@ -19,29 +19,31 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{
               __html: `
               (function() {
-                function setTheme(theme) {
-                  window.__theme = theme;
-                  console.log('Theme updated:', theme);
-              
-                  if (theme === 'dark') {
-                    document.documentElement.className = 'dark';
-                  } else {
-                    document.documentElement.className = '';
-                  }
-                };
-              
-                window.__setPreferredTheme = function(theme) {
-                  setTheme(theme);
-                  try {
-                    localStorage.setItem('preferred-theme', theme);
-                  } catch (e) {}
-                };
-              
+                window.__onThemeChange = function() {};
+                function setTheme(newTheme) {
+                  window.__theme = newTheme;
+                  preferredTheme = newTheme;
+                  document.body.className = newTheme;
+                  window.__onThemeChange(newTheme);
+                }
+
+                var preferredTheme;
                 try {
-                  preferredTheme = localStorage.getItem('preferred-theme');
-                } catch (e) {}
-              
-                let darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                  preferredTheme = localStorage.getItem('theme');
+                } catch (err) { }
+
+                window.__setPreferredTheme = function(newTheme) {
+                  setTheme(newTheme);
+                  try {
+                    localStorage.setItem('theme', newTheme);
+                  } catch (err) {}
+                }
+
+                var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                darkQuery.addListener(function(e) {
+                  window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+                });
+
                 setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
               })();
             `,
