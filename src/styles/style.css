@@ -302,6 +302,7 @@ a:focus {
 
 .bio {
   display: flex;
+  align-items: center;
   margin-bottom: var(--spacing-16);
 }
 
@@ -370,9 +371,11 @@ a:focus {
   }
 
   .bio {
-    background-color: var(--bg-seconday);
-    padding: 30px;
-    border-radius: 8px;
+    font-size: var(--fontSize-0);
+  }
+
+  .main-footer {
+    font-size: var(--fontSize-0);
   }
 }
 
