@@ -12,7 +12,7 @@ module.exports = {
     title: `GeekReflex`,
     author: {
       name: `Jerry Nwosu`,
-      summary: `Fighting bugs and errors to save the day`,
+      summary: `I build stuff on the internet`,
     },
     description: `Welcome to my personal programming and tech blog. Join me as I share my insights and experiences on all things coding, technology, and beyond.`,
     siteUrl: `https://geekreflex.netlify.app/`,

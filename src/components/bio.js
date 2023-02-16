@@ -47,7 +47,7 @@ const Bio = () => {
           <a href={`https://jerrynwosu.vercel.app/` || ``}>
             <strong>{author?.name}</strong>
           </a>
-          {` `}. I write code
+          {` `}.
           <br />
           {author?.summary || null}
         </p>
