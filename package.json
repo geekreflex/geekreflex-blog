@@ -8,6 +8,7 @@
     "url": "https://github.com/0bizt/geekreflex-blog/issues"
   },
   "dependencies": {
+    "@fontsource/acme": "^4.5.10",
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/montserrat": "^4.5.14",
     "gatsby": "^5.6.0",

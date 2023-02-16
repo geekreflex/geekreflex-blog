@@ -42,8 +42,8 @@ const Bio = () => {
       {author?.name && (
         <p>
           Hello, I&apos;m{" "}
-          <a href={author.portfolio || ``}>
-            <strong>{author.name}</strong>
+          <a href={author?.portfolio || ``}>
+            <strong>{author?.name}</strong>
           </a>
           , {author?.summary || null}
           {` `}
