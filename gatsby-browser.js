@@ -9,4 +9,4 @@ import "./src/styles/style.css"
 import "./src/styles/toggle.css"
 
 // Highlighting for code blocks
-import "prismjs/themes/prism.css"
+import "prismjs/themes/prism-tomorrow.css"

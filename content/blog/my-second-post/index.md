@@ -44,3 +44,17 @@ export const pageQuery = graphql`
   }
 `
 ```
+
+```
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-prismjs`,
+      ]
+    }
+  }
+]
+```

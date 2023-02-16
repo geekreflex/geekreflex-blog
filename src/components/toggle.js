@@ -3,7 +3,7 @@ import Toggle from "react-toggle"
 
 // const ICONS
 
-const ToggleTheme = () => {
+const ToggleTheme = ({ icons }) => {
   const [checked, setChecked] = useState(window.__theme === "dark")
 
   const onChange = useCallback(
@@ -15,7 +15,7 @@ const ToggleTheme = () => {
     [setChecked]
   )
 
-  return <Toggle defaultChecked={checked} onChange={onChange} />
+  return <Toggle defaultChecked={checked} onChange={onChange} icons={icons} />
 }
 
 export default ToggleTheme

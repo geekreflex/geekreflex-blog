@@ -139,3 +139,10 @@
   -moz-box-shadow: 0px 0px 5px 5px var(--color-primary);
   box-shadow: 0px 0px 5px 5px var(--color-primary);
 }
+
+/* Added this line to align the cutom icon properly */
+.react-toggle-track-check,
+.react-toggle-track-x {
+  display: flex;
+  align-items: center;
+}

@@ -2,6 +2,9 @@ import * as React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import ToggleTheme from "./toggle"
 
+import sun from "../assets/sun.png"
+import moon from "../assets/moon.png"
+
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -44,7 +47,28 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">
         {header}
-        <ToggleTheme />
+        <ToggleTheme
+          icons={{
+            checked: (
+              <img
+                src={moon}
+                width="16"
+                height="16"
+                role="presentation"
+                style={{ pointerEvents: "none" }}
+              />
+            ),
+            unchecked: (
+              <img
+                src={sun}
+                width="16"
+                height="16"
+                role="presentation"
+                style={{ pointerEvents: "none" }}
+              />
+            ),
+          }}
+        />
       </header>
       <main>{children}</main>
       <footer>
