@@ -58,6 +58,7 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --code-tag-highlight: #f5f5f7;
 }
 
 :root.dark {
@@ -69,6 +70,7 @@
   --color-heading-black: #ffffff;
   --color-accent: #343a46;
   --color-text-light: #ccc;
+  --code-tag-highlight: #2f333c;
 }
 
 /* HTML elements */
@@ -381,3 +383,7 @@ a:focus {
 }
 
 /* Editor */
+code.language-text {
+  background-color: var(--code-tag-highlight) !important;
+  color: var(--color-primary) !important;
+}
