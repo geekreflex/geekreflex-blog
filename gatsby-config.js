@@ -13,6 +13,7 @@ module.exports = {
     author: {
       name: `Jerry Nwosu`,
       summary: `welcome to my personal programming blog, where I share my insights on all things code.`,
+      portfolio: `https://jerrynwosu.vercel.app`,
     },
     description: `Welcome to my personal programming and tech blog. Join me as I share my insights and experiences on all things coding, technology, and beyond.`,
     siteUrl: `https://geekreflex.netlify.app/`,
