@@ -327,6 +327,29 @@ a:focus {
   margin: var(--spacing-0);
 }
 
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials a {
+  color: var(--color-text);
+  padding: 5px;
+  font-size: var(--fontSize-3);
+  display: flex;
+  cursor: pointer;
+}
+
+.footer-socials a:hover {
+  color: var(--color-primary);
+}
+
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }

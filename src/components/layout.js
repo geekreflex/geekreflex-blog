@@ -4,6 +4,7 @@ import ToggleTheme from "./toggle"
 
 import sun from "../assets/sun.png"
 import moon from "../assets/moon.png"
+import Footer from "./footer"
 
 const Layout = ({ location, title, children }) => {
   const [theme, setTheme] = React.useState(null)
@@ -88,10 +89,7 @@ const Layout = ({ location, title, children }) => {
         )}
       </header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()},{` `}
-        {author?.name}
-      </footer>
+      <Footer />
     </div>
   )
 }
