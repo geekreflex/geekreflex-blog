@@ -60,6 +60,16 @@
   --color-accent: #d1dce5;
 }
 
+:root.dark {
+  --bg: #23272f !important;
+  --color-text: #ffffff;
+  --color-primary: #119bca;
+  --color-heading: #ffffff;
+  --color-heading-black: #ffffff;
+  --color-accent: #343a46;
+  --color-text-light: #ccc;
+}
+
 /* HTML elements */
 
 *,
@@ -79,6 +89,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--bg);
 }
 
 footer {
@@ -250,6 +261,10 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
 }
 
 .main-heading {
@@ -329,3 +344,5 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/* Editor */

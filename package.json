@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "geekreflex",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Welcome to my personal programming and tech blog. Join me as I share my insights and experiences on all things coding, technology, and beyond.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jerry Nwosu <jerrynwosu007@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/0bizt/geekreflex-blog/issues"
   },
   "dependencies": {
     "@fontsource/merriweather": "^4.5.14",
@@ -23,19 +23,21 @@
     "gatsby-transformer-sharp": "^5.6.0",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-toggle": "^4.1.3"
   },
   "devDependencies": {
+    "@types/react-toggle": "^4.0.3",
     "prettier": "^2.8.3"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/0bizt/geekreflex-blog#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/0bizt/geekreflex-blog.git"
   },
   "scripts": {
     "build": "gatsby build",

@@ -42,6 +42,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   </Layout>
 )
 
+// @ts-expect-error
 export const Head: HeadFC<DataProps> = () => <Seo title="Using TypeScript" />
 
 export default UsingTypescript
