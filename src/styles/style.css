@@ -43,6 +43,7 @@
   --lineHeight-normal: 1.5;
   --lineHeight-relaxed: 1.625;
   /* 1.200 Minor Third Type Scale */
+  --bg-seconday: #f6f7f9;
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
   --fontSize-2: 1.2rem;
@@ -60,7 +61,8 @@
 }
 
 :root.dark {
-  --bg: #23272f !important;
+  --bg: #23272f;
+  --bg-seconday: #343a46;
   --color-text: #ffffff;
   --color-primary: #119bca;
   --color-heading: #ffffff;
@@ -335,6 +337,7 @@ a:focus {
 
 .footer-socials {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -364,6 +367,12 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+
+  .bio {
+    background-color: var(--bg-seconday);
+    padding: 30px;
+    border-radius: 8px;
   }
 }
 
