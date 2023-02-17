@@ -57,7 +57,7 @@ function setInLocalStorage(key, value) {
 }
 ```
 
-In this function, we use the `setItem` method to set the key-value pair in `localStorage`. We stringify the value using `JSON.stringify` so thet we can store any JavaScript object in `localStorage`.
+In this function, we use the `setItem` method to set the key-value pair in `localStorage`. We stringify the value using `JSON.stringify` so that we can store any JavaScript object in `localStorage`.
 
 ## Using the Helper Functions
 
@@ -79,7 +79,7 @@ By using these helper functions, we can reduce the amount of code we need to wri
 
 Let's take a look at another example of using our helper functions:
 
-Suppose you're building a todo list application that allows users to add, delete, and modify tasks. To ensure that the user's tasks are persisted even if they close or refresh the page, you decide to use `localStoragee to store the tasks.
+Suppose you're building a todo list application that allows users to add, delete, and modify tasks. To ensure that the user's tasks are persisted even if they close or refresh the page, you decide to use `localStorage` to store the tasks.
 
 Here's an example using the helper functions for `get` and `set`
 
