@@ -152,4 +152,4 @@ location.reload()
 
 Creating helper functions for `localStorage` get and set operations are a valueable tool for any web developer looking to streamline their workflows and simplify their code. By using these functions, you can reduce the amount of code you need to write and maintain, and eliminate common errors.
 
-In this article we've explored how to create and use these helper functions in your web applications, and have also highlighted some advanced techniques for working with `localStorage`. By putting these tips and tricks into practice, you can improve the performance and user experience of you applications, while making development process smoother and more efficient.
+In this article we've explored how to create and use these helper functions in your web applications, and have also highlighted some advanced techniques for working with `localStorage`. By putting these tips and tricks into practice, you can improve the performance and user experience of your applications, while making development process smoother and more efficient.
