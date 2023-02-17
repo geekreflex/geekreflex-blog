@@ -1,5 +1,5 @@
 ---
-title: Interesting Dive Into Technical Writing!
+title: "Hello World: Technical Writing!"
 date: "2023-02-15"
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: Creating LocalStorage Helper Functions
+title: "Creating LocalStorage Helper Functions"
 date: "2023-02-17"
 ---
 
-`localStorage` is a powerful feature of modern web browsers that allows web developers to store key-value pairs in the client-side browser storage. This feature is essential for building web applications that require persistent data storage, as it allows developers to store data that persists after the user refreshes the page, navigates away from the website or even closes the browser.
+LocalStorage is a powerful feature of modern web browsers that allows web developers to store key-value pairs in the client-side browser storage. This feature is essential for building web applications that require persistent data storage, as it allows developers to store data that persists after the user refreshes the page, navigates away from the website or even closes the browser.
 
 In this article, we'll explore how to create helper functions for `localStorage` get and set operations, which will simplify our code and make it easier to use `localStorage` in our web applications.
 
