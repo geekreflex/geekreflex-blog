@@ -104,7 +104,7 @@ Using helper function for `get` and `set` operations can simplify our code and m
 
 We can also add additional functionality to these helper functions, such as type checking and error handling, depending on our specific use case. For example, we could modify the `setInLocalStorage` helper function to throw an error if the key or value is not provided, or we could modify the `getFromLocalStorage` helper function to check that the value returned from `localStorage` is of the expected type.
 
-```js
+```js{2-4, 10-12}
 function setInLocalStorage(key, value) {
   if (!key || !value) {
     throw new Error("Key and value are required")
@@ -138,7 +138,7 @@ function removeFromLocalStorage(key) {
 
 This function takes a `key` parameter that identifies the data we want to remove from `localStorage`. We can then call this function whenever we need to remove data from `localStorage`.
 
-For example, let's say we have a form that allows users to save their preferences. When the user decides to clear their preferences, we call the `remmoveFromLocalStorage` function to remove the preference data from `localStorage`.
+For example, let's say we have a form that allows users to save their preferences. When the user decides to clear their preferences, we call the `removeFromLocalStorage` function to remove the preference data from `localStorage`.
 
 ```js
 // Remove the preference data from localStorage
