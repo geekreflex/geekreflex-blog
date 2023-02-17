@@ -132,7 +132,7 @@ function removeFromLocalStorage(key) {
   if (!key) {
     throw new Error("Key is required")
   }
-  localStorage.removeItm(key)
+  localStorage.removeItem(key)
 }
 ```
 
