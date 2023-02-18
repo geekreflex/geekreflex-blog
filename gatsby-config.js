@@ -14,7 +14,7 @@ module.exports = {
       name: `Jerry Nwosu`,
       summary: `I build stuff on the internet.`,
     },
-    description: `Welcome to my personal programming and tech blog. Join me as I share my insights and experiences on all things coding, technology, and beyond.`,
+    description: `Personal blog. Tech and more`,
     siteUrl: `https://geekreflex.netlify.app/`,
     social: {
       twitter: `0bizt`,
