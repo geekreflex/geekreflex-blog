@@ -15,4 +15,4 @@ And honestly, the more I thought about it, the more excited I got. I mean, think
 
 Of course, I know it's not going to be easy. Writing is a whole different ballgame. I'm used to expressing myself through code, where symbol has a specific meaning. But with writing, it's all about using words to convey a message. Words. Like, actual words. It's almost too much to handle.
 
-But you know what? I'm up for the challenge. I'm going to dive headfirst into the world of technical writing and see where it takes me. Who knows? Maybe I'll end up writing the documentation for the next big software release, or maybe I'll write a book on software engineering that becomes a bestseller. The possibilities are endless.
+But you know what? I'm up for the challenge. I'm going to dive headfirst into the world of technical writing and see where it takes me. Who knows? Maybe I'll end up writing the documentation for the next big software release, or maybe I'll write a book on software engineering that becomes a bestseller 😎. The possibilities are endless.
