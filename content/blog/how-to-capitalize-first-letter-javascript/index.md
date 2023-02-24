@@ -30,7 +30,7 @@ This method is similar to the previous one, except we use the `slice()` method t
 
 ## Capitalize Function
 
-To streamline the code, we can create a utitlity function for the capitalize method and utitlize it whereever needed.
+To streamline the code, we can create a utility function for the capitalize method and utilize it whereever needed.
 
 Here's an example:
 
