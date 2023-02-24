@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Time from "../components/time"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -20,7 +21,12 @@ const BlogPostTemplate = ({
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <p>{post.frontmatter.date}</p>
+            <p>
+              <Time text={post.html} />
+            </p>
+          </div>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
