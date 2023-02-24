@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Time from "../components/time"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -43,6 +44,7 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                   <small>{post.frontmatter.date}</small>
+                  <Time text={post.html} />
                 </header>
                 <section>
                   <p
@@ -68,7 +70,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Coding Things" />
+export const Head = () => <Seo title="" />
 
 export const pageQuery = graphql`
   {
@@ -80,6 +82,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         excerpt
+        html
         fields {
           slug
         }
