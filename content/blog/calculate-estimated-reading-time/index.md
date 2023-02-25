@@ -1,5 +1,5 @@
 ---
-title: "Calculate the Estimated Reading Time in JavaScript"
+title: "Calculate Estimated Reading Time"
 date: "2023-02-25"
 ---
 
