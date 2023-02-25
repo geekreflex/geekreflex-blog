@@ -17,7 +17,7 @@ module.exports = {
     description: `Personal blog. Tech and more`,
     siteUrl: `https://geekreflex.netlify.app/`,
     social: {
-      twitter: `0bizt`,
+      twitter: `geekreflex`,
     },
   },
   plugins: [
