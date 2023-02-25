@@ -13,7 +13,7 @@ function calculateReadingTime(text) {
   const cleanText = text.replace(/<.*?>/g, "") // remove HTML tags
   const wordCount = cleanText.match(/\w+/g).length // count words
   const readingTimeMinutes = Math.ceil(wordCount / wordsPerMinute) // calculate reading time in minutes
-  return `${readingTimeMinutes} ${readingTimeMinutes === 1} ? "min" : "mins"` // format reading time string
+  return `${readingTimeMinutes} ${readingTimeMinutes === 1 ? "min" : "mins"}` // format reading time string
 }
 ```
 
