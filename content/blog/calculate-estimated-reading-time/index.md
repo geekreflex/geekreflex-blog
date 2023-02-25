@@ -3,7 +3,7 @@ title: "Calculate Estimated Reading Time"
 date: "2023-02-25"
 ---
 
-I recently added a reading time feature to this blog, and I want to share with you how I did it. Instead of using a plugin, I decided to create my own utility function to calculate the reading time.
+I recently added a reading time feature to this blog, and I want to share with you how I did it. Instead of using a plugin, I decided to create a utility function to calculate the reading time.
 
 Here's the code for the `calcaulateReadingTime()` function:
 
