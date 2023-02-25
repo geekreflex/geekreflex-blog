@@ -5,7 +5,7 @@ date: "2023-02-25"
 
 I recently added a reading time feature to this blog, and I want to share with you how I did it. Instead of using a plugin, I decided to create a utility function to calculate the reading time.
 
-Here's the code for the `calcaulateReadingTime()` function:
+Here's the code for the `calculateReadingTime()` function:
 
 ```js
 function calculateReadingTime(text) {
@@ -13,7 +13,7 @@ function calculateReadingTime(text) {
   const cleanText = text.replace(/<.*?>/g, "") // remove HTML tags
   const wordCount = cleanText.match(/\w+/g).length // count words
   const readingTimeMinutes = Math.ceil(wordCount / wordsPerMinute) // calculate reading time in minutes
-  return readingTimeMinutes
+  return `${readingTimeMinutes} ${readingTimeMinutes === 1} ? "min" : "mins"` // format reading time string
 }
 ```
 
