@@ -17,7 +17,7 @@ function calculateReadingTime(text) {
 }
 ```
 
-Here's an example of the `Time` component and how I used the function.
+Here's an example of the `Time` component and how I used the function:
 
 ```js
 import React from "react"
