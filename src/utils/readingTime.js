@@ -40,7 +40,7 @@ export function calculateReadingTime(
     }`
   } else {
     return `${readingTime.toFixed(decimalPlaces)} min${
-      readingTime === 1 ? "" : "s"
+      Math.floor(readingTime.toFixed(decimalPlaces)) === 1 ? "" : "s"
     }`
   }
 }
