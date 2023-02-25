@@ -35,7 +35,7 @@ export function calculateReadingTime(
   if (includeSeconds) {
     const seconds = Math.round((readingTime % 1) * 60)
     const minutes = Math.floor(readingTime)
-    return `${minutes} minute${minutes === 1 ? "" : "s"} ${seconds} second${
+    return `${minutes} min${minutes === 1 ? "" : "s"} ${seconds} sec${
       seconds === 1 ? "" : "s"
     }`
   } else {
