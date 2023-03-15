@@ -34,7 +34,7 @@ To use this in your application, simply import it and render it like any other c
 
 ```jsx
 import React from "react"
-import MySvg from "./MySvg"
+import MoonIcon from "./icons/MoonIcon"
 
 function App() {
   return (
