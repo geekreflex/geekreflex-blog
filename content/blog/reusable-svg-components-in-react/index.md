@@ -40,7 +40,9 @@ function App() {
   return (
     <div>
       <h1>My App</h1>
-      <MoonIcon style={{ fontSize: "20px", color: "orangered" }} />
+      <span style={{ fontSize: "20px", color: "orangered" }}>
+        <MoonIcon />
+      </span>
       <MoonIcon width="200" height="200" fill="orangered" />
     </div>
   )
