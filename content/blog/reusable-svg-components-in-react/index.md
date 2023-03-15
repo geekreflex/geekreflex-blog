@@ -1,5 +1,5 @@
 ---
-title: "Resuable SVG Components in React"
+title: "Reusable SVG Components in React"
 date: "2023-03-15"
 ---
 
