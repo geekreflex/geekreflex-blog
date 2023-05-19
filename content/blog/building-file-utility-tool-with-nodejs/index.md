@@ -156,9 +156,9 @@ Here's how you can make it work globally:
 
 ```json
 {
-  "name": "utiliz-tool",
+  "name": "utilz",
   "version": "1.0.0",
-  "description": "Utility too for Copy, move, and delete operations",
+  "description": "Utility tool for Copy, Move, and Delete operations",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
