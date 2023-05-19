@@ -40,6 +40,7 @@ const { program } = require("commander")
 
 program.version("1.0.0").description("File Utility Tool")
 
+// Copy command
 program
   .command("copy <source> <destination>")
   .description("Copy a file from the source path to the destination path")
@@ -60,15 +61,42 @@ program
       console.error("Error copying file:", err.message)
     })
   })
+
+// Move command
+
+// Delete command
+
+program.parse(process.argv)
 ```
 
 In the above code, we import the necessary modules `fs` and `path` for file operations, as well as the `program` object from `commander`. We define a `copy` command that takes a source and destination file path as arguments.
 
 Inside the `copy` command, we resolve the provided paths to their absolute paths using `path.resolve()`. This ensures that we are working with the correct file locations. We then create readable and writeable streams using `fs.createReadStream()` and `fs.createWriteStream()` respectively. By piping the source stream to the destination stream, we copy the file contents. Success and error messages are logged accordingly.
 
+Lastly, the `program.parse(process.argv)` line executes the utility tool from the command line. It parses the command-line arguments passed to the tools and invokes the corresponding actions defined for each command.
+
+To test our copy implementation, let's create a file `source.txt` in the project directory and add some content to it. You can use any text editor to create the file and add some text of your choice.
+
+```bash
+source.txt
+
+This is the content of the source file.
+```
+
+Now, let's run the copy command to copy the contents of `source.txt` to a new file called `destination.txt`
+
+```bash
+node index.js source.txt destination.txt
+```
+
+If everything works as expected, we should have a new file called `destination.txt` created in the project directory with the same content as `source.txt`.
+
 ## Implementing the File Moving Command
 
+Next, let's implement the file move functionality. Add the code below to `index.js`:
+
 ```js
+// Move command
 program
   .command("move <source> <destination>")
   .description("Move a file from the source path to the destination path")
@@ -88,11 +116,22 @@ program
 
 In the code snippet above, we define a `move` command that takes two arguments: the source file path and the destination file path. Similar to the previous command, we resolve the provided paths to their absolute paths using `path.resolve()`. We then use the `fs.rename()` function to rename the source file to the destination path, effectively moving the file. Success and error messages are handled accordingly.
 
+To test our move implementation, follow the steps we did for copy command. Create a file called `source.txt` within the project directory and add some content to it.
+
+Now, run the move command to move `source.txt` to a new location called `destination.txt`
+
+```bash
+node index.js move source.txt destination.txt
+```
+
+If everything works as expected, `source.txt` should be moved to the new location specified by `destination.txt`. The original file `source.txt` should no longer exist in the project directory.
+
 ## Implementing the File Deletion Command
 
 Lastly, let's implement the file deletion functionality. Add the following code to `index.js`:
 
 ```js
+// Delete command
 program
   .command("delete <file>")
   .description("Delete a file")
@@ -107,13 +146,21 @@ program
       }
     })
   })
-
-program.parse(process.argv)
 ```
 
 For the `delete` command, it takes a single argument representing the file path. We resolve the provided path using `path.resolve()`. Then, we use the `fs.unlink()` function to delete the file at the specified path.
 
-Lastly, the `program.parse(process.argv)` line executes the utility tool from the command line. It parses the command-line arguments passed to the tools and invokes the corresponding actions defined for each command.
+To test our delete implementation, follow the steps we did for copy command. Assuming you already have a `source.txt` file in the project directory, run the delete command to delete the file:
+
+```bash
+node index.js delete source.txt
+```
+
+If everything works as expected, the file `source.txt` should be deleted from the project directory.
+
+> ⚠️ **Warning: This action is irreversible!**
+>
+> Please note that this action is irreversible, so make sure you have a backup of any important files before running the delete command.
 
 ## Testing Our Tool 🛠️
 
@@ -146,7 +193,11 @@ node index.js delete file.txt
 Adjust the file names and path according to your specific requirements.
 The tool will execute the corresponding command and provide feedback in the console, such as success messages or error messages if any issues occur.
 
+## What's Next 💡?
+
 That's it! The utility tool is now at your service. But wait, there's a bright idea that just sparked! Remember when I mentioned earlier that we would revisit the package.json file? Well, this is the perfect time. You see, although our tool is capable of some impressive feats, it's currently confined within the boundaries of our project folder. But don't worry, we have a clever solution to overcome this limitation and make our tool more versatile. Let's shed some light on how to expand its reach beyond the boundaries of our project folder
+
+## Making Our Tool Global
 
 First, to make the tool work globally, we can package it as a global Node.js command-line tool. This will allow you to run the tool from any directory on your computer without needing to specify the path to the `index.js` file.
 
