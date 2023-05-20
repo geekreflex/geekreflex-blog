@@ -29,7 +29,7 @@ Our utility tool will utilize the `commander` package to handle command-line int
 npm install commander
 ```
 
-## Implementing the File Copying command
+### Implementing Copy command
 
 Let's start by implementing the file copying functionality. We will use the `fs` (File System) module provide by Node.js. Create a new file called `index.js` in the root directory of your project and add the following code:
 
@@ -91,7 +91,7 @@ node index.js source.txt destination.txt
 
 If everything works as expected, we should have a new file called `destination.txt` created in the project directory with the same content as `source.txt`.
 
-## Implementing the File Moving Command
+### Implementing Move Command
 
 Next, let's implement the file move functionality. Add the code below to `index.js`:
 
@@ -126,7 +126,7 @@ node index.js move source.txt destination.txt
 
 If everything works as expected, `source.txt` should be moved to the new location specified by `destination.txt`. The original file `source.txt` should no longer exist in the project directory.
 
-## Implementing the File Deletion Command
+### Implementing Delete Command
 
 Lastly, let's implement the file deletion functionality. Add the following code to `index.js`:
 
@@ -197,7 +197,7 @@ The tool will execute the corresponding command and provide feedback in the cons
 
 That's it! The utility tool is now at your service. But wait, there's a bright idea that just sparked! Remember when I mentioned earlier that we would revisit the package.json file? Well, this is the perfect time. You see, although our tool is capable of some impressive feats, it's currently confined within the boundaries of our project folder. But don't worry, we have a clever solution to overcome this limitation and make our tool more versatile. Let's shed some light on how to expand its reach beyond the boundaries of our project folder
 
-## Making Our Tool Global
+## Making Our Tool Available Globally
 
 First, to make the tool work globally, we can package it as a global Node.js command-line tool. This will allow you to run the tool from any directory on your computer without needing to specify the path to the `index.js` file.
 
